@@ -75,6 +75,7 @@
             // Load the PoseNet model weights for either the 0.50, 0.75, 1.00, or 1.01
             // version
             guiState.net = await posenet.load(+guiState.changeToArchitecture);
+            guiState.net = await posenet.load(+guiState.changeToArchitecture);
 
             guiState.changeToArchitecture = null;
           }
@@ -216,7 +217,7 @@
         // Image scale factor: What to scale the image by before feeding it through
         // the network.
         input.add(guiState.input, 'imageScaleFactor').min(0.2).max(1.0);
-        input.open();
+        //input.open();
 
         // Pose confidence: the overall confidence in the estimation of a person's
         // pose (i.e. a person detected in a frame)
@@ -230,7 +231,7 @@
         output.add(guiState.output, 'showVideo');
         output.add(guiState.output, 'showSkeleton');
         output.add(guiState.output, 'showPoints');
-        output.open();
+        //output.open();
 
 
         architectureController.onChange(function(architecture) {
