@@ -24,3 +24,4 @@ someOtherfoler/
 *.zip
 
 .DS_Store
+.idea
